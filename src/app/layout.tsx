@@ -26,11 +26,11 @@ export default function RootLayout({
         </main>
         <section
           style={{ zIndex: -20 }}
-          className="absolute w-full h-2/3 left-0 top-1/4  bg-gradient-to-tr from-pink-950 via-slate-950 to-slate-950 blur-3xl"
+          className="absolute w-full h-2/3 left-0 bottom-0 md:top-1/4  bg-gradient-to-tr from-pink-950 via-slate-950 to-slate-950 blur-3xl"
         ></section>
         <section
           style={{ zIndex: -20 }}
-          className="absolute w-1/2 h-2/3 right-0 top-1/4  bg-gradient-to-tl from-indigo-950 via-slate-950 to-slate-950 blur-3xl"
+          className="absolute w-1/2 h-2/3 right-0 bottom-0 md:top-1/4  bg-gradient-to-tl from-indigo-950 via-slate-950 to-slate-950 blur-3xl"
         ></section>
       </body>
     </html>
