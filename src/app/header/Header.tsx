@@ -67,7 +67,7 @@ const Header = () => {
             />
           </a>
           <Divider vertical />
-          <a className="text-slate-300" href="https://www.codepen.io/wurby">
+          <a className="text-slate-300" href="https://codepen.io/wurby">
             <FontAwesomeIcon
               icon={faCodepen}
               className="hover:scale-125 transition-all duration-300"
