@@ -22,25 +22,19 @@ const Header = () => {
 
   const radialGradientStyle = () => {
     const defaultPosition = { x: 0, y: 0 };
-
     if (mousePosition === defaultPosition) {
-      return {};
-    }
-    return {
-      background: `radial-gradient(circle 50px at ${mousePosition.x}px ${mousePosition.y}px, rgb(15 23 42), rgb(2 6 23))`,
-    };
-  };
-
-  const handleScale = () => {
-    return {};
+      return { background: 'none' };
+    } else
+      return {
+        background: `radial-gradient(circle 50px at ${mousePosition.x}px ${mousePosition.y}px, rgb(4 47 46), rgb(2 6 23))`,
+      };
   };
 
   return (
     <>
       <header
-        className={`flex  items-center relative px-4 my-8 md:mx-16 h-12 border border-slate-400 md:rounded-full max-w-3xl w-full self-center transition-all duration-500 ease-in-out`}
+        className={`flex items-center relative px-4 my-8 md:mx-16 h-12 border border-slate-400 md:rounded-full max-w-3xl w-full self-center transition-all duration-500 ease-in-out`}
         onMouseMove={handleMouseMove}
-        style={{ ...handleScale() }}
         onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
       >
         <div className="flex grow gap-4 h-full items-center text-sm md:text-base">
