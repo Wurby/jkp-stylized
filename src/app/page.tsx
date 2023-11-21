@@ -21,7 +21,7 @@ export default function Home() {
         <h1 className="w-full text-center text-5xl font-light">
           Crafting beautiful and functional web experiences.
         </h1>
-        <i className="absolute bottom-0 animate-bounce">
+        <i className="absolute bottom-10 animate-bounce">
           <FontAwesomeIcon icon={faCaretDown} />
         </i>
       </section>
