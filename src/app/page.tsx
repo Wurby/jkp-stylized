@@ -1,5 +1,9 @@
 import { faPagelines } from '@fortawesome/free-brands-svg-icons';
-import { faCartShopping, faHotel } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCaretDown,
+  faCartShopping,
+  faHotel,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Divider from './components/Divider';
 
@@ -17,6 +21,9 @@ export default function Home() {
         <h1 className="w-full text-center text-5xl font-light">
           Crafting beautiful and functional web experiences.
         </h1>
+        <i className="absolute bottom-0 animate-bounce">
+          <FontAwesomeIcon icon={faCaretDown} />
+        </i>
       </section>
       <h2 className="w-full text-center text-3xl font-thin pt-24 max-w-2xl">
         Projects worked on
