@@ -44,9 +44,11 @@ const Header = () => {
         onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
       >
         <div className="flex grow gap-4 h-full items-center text-sm md:text-base">
-          <p className="">Joshua Keith Pearson</p>
+          <a href="/" className="font-thin">
+            Joshua Keith Pearson
+          </a>
           <Divider vertical />
-          <p className="">Developer. Tester.</p>
+          <p className="font-medium">Developer. Tester.</p>
         </div>
 
         <div className="flex h-full gap-4 items-center px-2">
