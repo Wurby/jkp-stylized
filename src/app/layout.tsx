@@ -21,7 +21,7 @@ export default function RootLayout({
         <header className="w-full flex justify-center">
           <Header />
         </header>
-        <main className="flex justify-center items-center flex-col w-full place-self-center">
+        <main className="flex justify-center items-center flex-col w-full place-self-center py-12">
           {children}
         </main>
         <section
