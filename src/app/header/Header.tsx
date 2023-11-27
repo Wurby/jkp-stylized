@@ -11,6 +11,9 @@ import { faSortUp } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+  const [backgroundStyle, setBackgroundStyle] = React.useState({
+    background: 'none',
+  });
 
   const handleMouseMove = (event: React.MouseEvent<HTMLHeadingElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -18,16 +21,14 @@ const Header = () => {
       x: event.clientX - rect.left,
       y: event.clientY - rect.top,
     });
+    setBackgroundStyle({
+      background: `radial-gradient(circle 50px at ${mousePosition.x}px ${mousePosition.y}px, rgb(4 47 46), rgb(2 6 23))`,
+    });
   };
 
-  const radialGradientStyle = () => {
-    const defaultPosition = { x: 0, y: 0 };
-    if (mousePosition === defaultPosition) {
-      return { background: 'none' };
-    } else
-      return {
-        background: `radial-gradient(circle 50px at ${mousePosition.x}px ${mousePosition.y}px, rgb(4 47 46), rgb(2 6 23))`,
-      };
+  const handleMouseLeave = () => {
+    setBackgroundStyle({ background: 'none' });
+    setMousePosition({ x: 0, y: 0 });
   };
 
   return (
@@ -35,7 +36,7 @@ const Header = () => {
       <header
         className={`flex items-center relative px-4 my-8 md:mx-16 h-12 border border-slate-400 md:rounded-full max-w-3xl w-full self-center transition-all duration-500 ease-in-out`}
         onMouseMove={handleMouseMove}
-        onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
+        onMouseLeave={() => handleMouseLeave()}
       >
         <div className="flex grow gap-4 h-full items-center text-sm md:text-base">
           <a href="/" className="font-thin">
@@ -73,7 +74,7 @@ const Header = () => {
 
         <section
           className={`absolute left-0 w-full h-full rounded-full `}
-          style={{ ...radialGradientStyle(), zIndex: -1 }}
+          style={{ ...backgroundStyle, zIndex: -1 }}
         ></section>
         <div className="absolute flex flex-col justify-center items-center right-0 -bottom-14 ">
           <FontAwesomeIcon icon={faSortUp} className="animate-bounce" />
